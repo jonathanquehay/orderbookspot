@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://jonathanquehay.github.io/orderbook/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://jonathanquehay.github.io/orderbook/favicon.png" />
+    <link rel="apple-touch-icon" sizes="57x57"
+        href="https://jonathanquehay.github.io/orderbook/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="https://jonathanquehay.github.io/orderbook/touch-icon-ipad.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$LIBRO ORDENES SPOT$</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 id="tit1">$ LIBRO DE ORDENES SPOT$</h2>
+    <h3 id="precio_actual"> - MERCADO SPOT -</h3>
+
+    <hr style="border:3px dotted rgb(70, 69, 69);" />
+    <div id="titulos">
+        <!-- <input type="text" id="moneda" style="text-transform:uppercase;" placeholder="escriba moneda"
+            onclick="this.value=''"> -->
+
+        <input type="text" id="moneda" placeholder="escriba moneda" style="text-transform:uppercase;"
+            onclick=this.value=''
+            onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()">
+
+
+    </div>
+
+    <hr style="border:3px dotted rgb(70, 69, 69);" />
+
+    <!-- <div id="b"><button id="calcular">Visualizar</button></div> -->
+
+
+
+
+    <table class="tabla-css">
+        <thead>
+            <tr>
+                <th>PROMEDIO DE COMPRA</th>
+                <th>PROMEDIO DE VENTA</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+        </tbody>
+    </table>
+    <div id="datos">
+        <h4 id="compradores"></h4>
+        <h2 id="vs">VS</h2>
+        <h4 id="vendedores"></h4>
+    </div>
+
+    <footer>
+        <center>
+            <p style="font-family:courier;">
+                Autor: Jonathan Moreno | BINANCE API
+            </p>
+        </center>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
