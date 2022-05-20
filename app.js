@@ -110,8 +110,9 @@ function iniciar() {
         const i = Promedio(data.bids.splice(4, 99));
         const j = Promedio(data.asks.splice(4, 99));
 
+        const promedioCompra = (Number(a) + Number(c) + Number(e) + Number(g) + Number(i)) / 5
 
-
+        document.getElementById('promedio').innerHTML = "Compra promedio: " + promedioCompra.toFixed(4)
         body +=
             `<tr><td>${a}</td><td>${b}</td></tr>
                 <tr><td>${c}</td><td>${d}</td></tr>
@@ -120,6 +121,7 @@ function iniciar() {
                 <tr><td>${i}</td><td>${j}</td></tr>`
         //console.log(j)
         document.getElementById('data').innerHTML = body
+
     }
 }
 
